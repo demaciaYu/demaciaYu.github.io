@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="Coding changes the world :)">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://www.yufy.top/index.html">
+<meta name="description" content="问题和我的解决方案坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。1我的解决方案：我检查了ssh key， 重置了github里面保存的key，发现都没有卵用，最后发现是 blog/_config.yml 里面的 deploy -&amp;gt; repo 写错了，我用的是ssh repo，结果写成了https repo！！ 改过">
+<meta property="og:type" content="article">
+<meta property="og:title" content="部署hexo + gitment的时候遇到的坑">
+<meta property="og:url" content="http://www.yufy.top/2018/06/25/hexo_gitment_deploy_qa/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Coding changes the world :)">
+<meta property="og:description" content="问题和我的解决方案坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。1我的解决方案：我检查了ssh key， 重置了github里面保存的key，发现都没有卵用，最后发现是 blog/_config.yml 里面的 deploy -&amp;gt; repo 写错了，我用的是ssh repo，结果写成了https repo！！ 改过">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-24T17:01:22.231Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Coding changes the world :)">
+<meta name="twitter:title" content="部署hexo + gitment的时候遇到的坑">
+<meta name="twitter:description" content="问题和我的解决方案坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。1我的解决方案：我检查了ssh key， 重置了github里面保存的key，发现都没有卵用，最后发现是 blog/_config.yml 里面的 deploy -&amp;gt; repo 写错了，我用的是ssh repo，结果写成了https repo！！ 改过">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://www.yufy.top/"/>
+  <link rel="canonical" href="http://www.yufy.top/2018/06/25/hexo_gitment_deploy_qa/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>部署hexo + gitment的时候遇到的坑 | Hexo</title>
   
 
 
@@ -143,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,9 +237,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -269,9 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/25/hexo_gitment_deploy_qa/" itemprop="url">部署hexo + gitment的时候遇到的坑</a></h1>
+          <h1 class="post-title" itemprop="name headline">部署hexo + gitment的时候遇到的坑</h1>
         
 
         <div class="post-meta">
@@ -297,6 +295,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/25/hexo_gitment_deploy_qa/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/06/25/hexo_gitment_deploy_qa/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -321,9 +329,7 @@
       
 
       
-        
-          
-            <h2 id="问题和我的解决方案"><a href="#问题和我的解决方案" class="headerlink" title="问题和我的解决方案"></a>问题和我的解决方案</h2><h3 id="坑1-hexo-d的时候一直报错“ERROR-Permission-to-git-denied-to-user”。"><a href="#坑1-hexo-d的时候一直报错“ERROR-Permission-to-git-denied-to-user”。" class="headerlink" title="坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。"></a>坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的解决方案：我检查了ssh key， 重置了github里面保存的key，发现都没有卵用，最后发现是 blog/_config.yml 里面的 deploy -&gt; repo 写错了，我用的是ssh repo，结果写成了https repo！！ 改过来就好了</span><br></pre></td></tr></table></figure>
+        <h2 id="问题和我的解决方案"><a href="#问题和我的解决方案" class="headerlink" title="问题和我的解决方案"></a>问题和我的解决方案</h2><h3 id="坑1-hexo-d的时候一直报错“ERROR-Permission-to-git-denied-to-user”。"><a href="#坑1-hexo-d的时候一直报错“ERROR-Permission-to-git-denied-to-user”。" class="headerlink" title="坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。"></a>坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的解决方案：我检查了ssh key， 重置了github里面保存的key，发现都没有卵用，最后发现是 blog/_config.yml 里面的 deploy -&gt; repo 写错了，我用的是ssh repo，结果写成了https repo！！ 改过来就好了</span><br></pre></td></tr></table></figure>
 <h3 id="坑2-成功push后显示-“There-isn’t-a-GitHub-Pages-site-here”。"><a href="#坑2-成功push后显示-“There-isn’t-a-GitHub-Pages-site-here”。" class="headerlink" title="坑2: 成功push后显示 “There isn’t a GitHub Pages site here”。"></a>坑2: 成功push后显示 “There isn’t a GitHub Pages site here”。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的解决方案：等十分钟就好了。</span><br></pre></td></tr></table></figure>
 <h3 id="坑3-gitment-一直显示-“Error-Not-Found”。"><a href="#坑3-gitment-一直显示-“Error-Not-Found”。" class="headerlink" title="坑3: gitment 一直显示 “Error: Not Found”。"></a>坑3: gitment 一直显示 “Error: Not Found”。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的解决方案：检查了一堆东西后，发现一定要建一个新的repo给gitment当作存储repo，然后把repo地址配置正确即可。这个是我的repo地址：https://github.com/demaciaYu/gitment-comments</span><br></pre></td></tr></table></figure>
 <h3 id="坑4-gitment登入的时候报错”error-redirect-uri-mismatch-amp-error-description-The-redirect-uri-MUST-match-the-registered-callback-URL-for-this-application”"><a href="#坑4-gitment登入的时候报错”error-redirect-uri-mismatch-amp-error-description-The-redirect-uri-MUST-match-the-registered-callback-URL-for-this-application”" class="headerlink" title="坑4: gitment登入的时候报错”error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application”"></a>坑4: gitment登入的时候报错”error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application”</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修改了几次我的评论app里面的url和callback url。 但是没有立即生效的，要等一会儿才有效的。</span><br></pre></td></tr></table></figure>
@@ -331,8 +337,6 @@
 <li><em>至于很多常见的问题，没有具体列出来，这里只列了我遇到的问题和我的解决办法。 其他常见问题可以去查google前几条。</em></li>
 </ul>
 
-          
-        
       
     </div>
     
@@ -349,12 +353,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -364,10 +368,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -375,6 +380,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -395,8 +411,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -442,6 +467,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题和我的解决方案"><span class="nav-number">1.</span> <span class="nav-text">问题和我的解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#坑1-hexo-d的时候一直报错“ERROR-Permission-to-git-denied-to-user”。"><span class="nav-number">1.1.</span> <span class="nav-text">坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坑2-成功push后显示-“There-isn’t-a-GitHub-Pages-site-here”。"><span class="nav-number">1.2.</span> <span class="nav-text">坑2: 成功push后显示 “There isn’t a GitHub Pages site here”。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坑3-gitment-一直显示-“Error-Not-Found”。"><span class="nav-number">1.3.</span> <span class="nav-text">坑3: gitment 一直显示 “Error: Not Found”。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坑4-gitment登入的时候报错”error-redirect-uri-mismatch-amp-error-description-The-redirect-uri-MUST-match-the-registered-callback-URL-for-this-application”"><span class="nav-number">1.4.</span> <span class="nav-text">坑4: gitment登入的时候报错”error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application”</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -582,6 +623,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -620,6 +665,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'demaciaYu',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '84c1817710a8cc502e941f1ac250e308b2dea105',
+            
+                client_id: '7e187a5b563ce15a9fb0'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
