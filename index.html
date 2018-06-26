@@ -232,6 +232,134 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.yufy.top/2018/06/26/about_method_missing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johnny Yu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johnny's Playground">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/26/about_method_missing/" itemprop="url">Things about method missing in Ruby</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-26T09:53:57+08:00">
+                2018-06-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="The-Ghost-House"><a href="#The-Ghost-House" class="headerlink" title="The Ghost House"></a>The Ghost House</h2><p>If you are rewriting method_missing and it happens that you are calling a function carelessly with a small typo at the function name like “send_emeil” (The right name should be “send_email”).Then the tragedy happens, ruby will keep calling method_missing because she can’t find any method called “send_emeil” until ending up with “SystemStackError”.</p>
+<p><code>Solution: Lucklly, there is a easy way to solve this, ALWAYS add &quot;super unless obj.respond_to? &lt;method_name&gt;&quot; at the very beginning of your refactored method_missing.</code></p>
+<h2 id="The-Lier"><a href="#The-Lier" class="headerlink" title="The Lier"></a>The Lier</h2><p>Sometimes, the “respond_to? method_name” will tell you the wrong result when you are trying to ask the instance of the class which includes your refactored method_missing.</p>
+<p><code>Solution: always remember to rewrite respond_to? method and do enough test to make sure it&#39;s working as you expected.(** try to google the difference between &quot;respond_to?&quot; and &quot;respond_to_missing?&quot;. Always use &quot;respond_to_missing&quot; instead)</code></p>
+<h2 id="The-Fake-Ghosts"><a href="#The-Fake-Ghosts" class="headerlink" title="The Fake Ghosts"></a>The Fake Ghosts</h2><p>Sometimes when you’re trying to call methods like “display” and you found that it’s not working as you expected as a method_missing way.</p>
+<p><code>Solution: most of time, this happens because this methods has already been defined in the ancestors of your object, try to remove them( you can remove all instance methods except the needed ones like &quot;/^__|object_id/&quot; ) and keep the current class as a blank states. If you&#39;re using ruby &gt; 1.9, you should let your class inherited from &#39;BasicObject&#39;.</code></p>
+<h2 id="The-Snail-Ghosts"><a href="#The-Snail-Ghosts" class="headerlink" title="The Snail Ghosts"></a>The Snail Ghosts</h2><p>Sometimes the looking up performance could be bad when your object has a super long and horrible ancestor chain.</p>
+<p><code>Solution: you can use &quot;dynamic methods&quot; inside &quot;method missing&quot;. So every time your object finds that there is a missing methods, it will dynamically create a method so that next time there will be a existing method when you are calling the same method again.</code></p>
+<p> <em>However, there are still many unexpected issues inside ‘method_missing’, I suggest we should mostly use ‘dynamic methods’ instead of ‘method_missing’ especially in large project. :)</em></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.yufy.top/2018/06/25/hexo_gitment_deploy_qa/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -303,10 +431,10 @@
       
         
           
-            <h2 id="问题和我的解决方案"><a href="#问题和我的解决方案" class="headerlink" title="问题和我的解决方案"></a>问题和我的解决方案</h2><h3 id="坑1-hexo-d的时候一直报错“ERROR-Permission-to-git-denied-to-user”。"><a href="#坑1-hexo-d的时候一直报错“ERROR-Permission-to-git-denied-to-user”。" class="headerlink" title="坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。"></a>坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的解决方案：我检查了ssh key， 重置了github里面保存的key，发现都没有卵用，最后发现是 blog/_config.yml 里面的 deploy -&gt; repo 写错了，我用的是ssh repo，结果写成了https repo！！ 改过来就好了</span><br></pre></td></tr></table></figure>
-<h3 id="坑2-成功push后显示-“There-isn’t-a-GitHub-Pages-site-here”。"><a href="#坑2-成功push后显示-“There-isn’t-a-GitHub-Pages-site-here”。" class="headerlink" title="坑2: 成功push后显示 “There isn’t a GitHub Pages site here”。"></a>坑2: 成功push后显示 “There isn’t a GitHub Pages site here”。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的解决方案：等十分钟就好了。</span><br></pre></td></tr></table></figure>
-<h3 id="坑3-gitment-一直显示-“Error-Not-Found”。"><a href="#坑3-gitment-一直显示-“Error-Not-Found”。" class="headerlink" title="坑3: gitment 一直显示 “Error: Not Found”。"></a>坑3: gitment 一直显示 “Error: Not Found”。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的解决方案：检查了一堆东西后，发现一定要建一个新的repo给gitment当作存储repo，然后把repo地址配置正确即可。这个是我的repo地址：https://github.com/demaciaYu/gitment-comments</span><br></pre></td></tr></table></figure>
-<h3 id="坑4-gitment登入的时候报错error-redirect-uri-mismatch-amp-error-description-The-redirect-uri-MUST-match-the-registered-callback-URL-for-this-application"><a href="#坑4-gitment登入的时候报错error-redirect-uri-mismatch-amp-error-description-The-redirect-uri-MUST-match-the-registered-callback-URL-for-this-application" class="headerlink" title="坑4: gitment登入的时候报错error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application"></a>坑4: gitment登入的时候报错<code>error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修改了几次我的评论app里面的url和callback url。 但是没有立即生效的，要等一会儿才有效的。</span><br></pre></td></tr></table></figure>
+            <h2 id="问题和我的解决方案"><a href="#问题和我的解决方案" class="headerlink" title="问题和我的解决方案"></a>问题和我的解决方案</h2><h3 id="坑1-hexo-d的时候一直报错“ERROR-Permission-to-git-denied-to-user”。"><a href="#坑1-hexo-d的时候一直报错“ERROR-Permission-to-git-denied-to-user”。" class="headerlink" title="坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。"></a>坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。</h3><p><code>我的解决方案：我检查了ssh key， 重置了github里面保存的key，发现都没有卵用，最后发现是 blog/_config.yml 里面的 deploy -&gt; repo 写错了，我用的是ssh repo，结果写成了https repo！！ 改过来就好了</code></p>
+<h3 id="坑2-成功push后显示-“There-isn’t-a-GitHub-Pages-site-here”。"><a href="#坑2-成功push后显示-“There-isn’t-a-GitHub-Pages-site-here”。" class="headerlink" title="坑2: 成功push后显示 “There isn’t a GitHub Pages site here”。"></a>坑2: 成功push后显示 “There isn’t a GitHub Pages site here”。</h3><p><code>我的解决方案：等十分钟就好了。</code></p>
+<h3 id="坑3-gitment-一直显示-“Error-Not-Found”。"><a href="#坑3-gitment-一直显示-“Error-Not-Found”。" class="headerlink" title="坑3: gitment 一直显示 “Error: Not Found”。"></a>坑3: gitment 一直显示 “Error: Not Found”。</h3><p><code>我的解决方案：检查了一堆东西后，发现一定要建一个新的repo给gitment当作存储repo，然后把repo地址配置正确即可。这个是我的repo地址：https://github.com/demaciaYu/gitment-comments</code></p>
+<h3 id="坑4-gitment登入的时候报错error-redirect-uri-mismatch-amp-error-description-The-redirect-uri-MUST-match-the-registered-callback-URL-for-this-application"><a href="#坑4-gitment登入的时候报错error-redirect-uri-mismatch-amp-error-description-The-redirect-uri-MUST-match-the-registered-callback-URL-for-this-application" class="headerlink" title="坑4: gitment登入的时候报错error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application"></a>坑4: gitment登入的时候报错<code>error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application</code></h3><p><code>修改了几次我的评论app里面的url和callback url。 但是没有立即生效的，要等一会儿才有效的。</code></p>
 <ul>
 <li><em>至于很多常见的问题，没有具体列出来，这里只列了我遇到的问题和我的解决办法。 其他常见问题可以去查google前几条。</em></li>
 </ul>
@@ -395,7 +523,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
