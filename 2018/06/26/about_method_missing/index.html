@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Johnny&#39;s Playground">
 <meta property="og:description" content="The Ghost HouseIf you are rewriting method_missing and it happens that you are calling a function carelessly with a small typo at the function name like “send_emeil” (The right name should be “send_em">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-26T01:54:13.091Z">
+<meta property="og:updated_time" content="2018-06-26T02:03:49.344Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Things about method missing in Ruby">
 <meta name="twitter:description" content="The Ghost HouseIf you are rewriting method_missing and it happens that you are calling a function carelessly with a small typo at the function name like “send_emeil” (The right name should be “send_em">
@@ -261,7 +261,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-26T09:53:57+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-26T10:03:49+08:00">
                 2018-06-26
               </time>
             
@@ -309,7 +309,7 @@
       
 
       
-        <h2 id="The-Ghost-House"><a href="#The-Ghost-House" class="headerlink" title="The Ghost House"></a>The Ghost House</h2><p>If you are rewriting method_missing and it happens that you are calling a function carelessly with a small typo at the function name like “send_emeil” (The right name should be “send_email”).Then the tragedy happens, ruby will keep calling method_missing because she can’t find any method called “send_emeil” until ending up with “SystemStackError”.</p>
+        <h2 id="The-Ghost-House"><a href="#The-Ghost-House" class="headerlink" title="The Ghost House"></a>The Ghost House</h2><p>If you are rewriting method_missing and it happens that you are calling a function carelessly with a small typo at the function name like “send_emeil” (The right name should be “send_email”).Then the tragedy happens, ruby will keep calling method_missing because she can’t find any method called “send_emeil” until ending up with “SystemStackError”.<br><a id="more"></a></p>
 <p><code>Solution: Lucklly, there is a easy way to solve this, ALWAYS add &quot;super unless obj.respond_to? &lt;method_name&gt;&quot; at the very beginning of your refactored method_missing.</code></p>
 <h2 id="The-Lier"><a href="#The-Lier" class="headerlink" title="The Lier"></a>The Lier</h2><p>Sometimes, the “respond_to? method_name” will tell you the wrong result when you are trying to ask the instance of the class which includes your refactored method_missing.</p>
 <p><code>Solution: always remember to rewrite respond_to? method and do enough test to make sure it&#39;s working as you expected.(** try to google the difference between &quot;respond_to?&quot; and &quot;respond_to_missing?&quot;. Always use &quot;respond_to_missing&quot; instead)</code></p>
@@ -342,15 +342,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/25/hexo_gitment_deploy_qa/" rel="next" title="部署hexo + gitment的时候遇到的坑">
-                <i class="fa fa-chevron-left"></i> 部署hexo + gitment的时候遇到的坑
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/26/hexo_gitment_deploy_qa/" rel="prev" title="部署hexo + gitment的时候遇到的坑">
+                部署hexo + gitment的时候遇到的坑 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
