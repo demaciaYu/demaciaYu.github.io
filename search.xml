@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Scrapy+Postgresql爬取小说网站]]></title>
+    <url>%2F2018%2F07%2F16%2Fspiderpig_scrapy%2F</url>
+    <content type="text"><![CDATA[简介第一次写爬虫，抱着站在巨人肩膀上并且不太想抄作业的态度(原文里面用的mysql，并且爬了另一个网站！所以这里说我不爱抄作业 233)，我照着 文章https://cuiqingcai.com/3472.html 依葫芦画瓢撸了一个爬网站的功能。具体就是将笔趣看小说网站 www.biqukan.com 上面所有的小说给爬下来了。我爬的时候，一共爬了差不多8个小时。620篇小说，43万多个章节。 数据表结构请检查postgresqlpipelines/sql.py文件来获取所有的字段，注意 novel_info 表中的 novelurl字段 和 novel_content 中的chapterurl字段 需要加上唯一性索引。 基本思路 爬到首页的小说分类条目 分类条目下爬小说的名字和链接 小说链接里面爬取小说介绍和章节链接 章节链接中爬取章节的介绍和内容 项目地址https://github.com/demaciaYu/spiderpig/tree/master/spiderpig 最后项目写的很糙，第一版抱着罗老板又不是不能用的态度完成了。以后其他的爬虫功能会更新在这个项目里面，代码一定会越来越好的。欢迎大家留言交流 :p]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[部署hexo + gitment的时候遇到的坑]]></title>
     <url>%2F2018%2F06%2F26%2Fhexo_gitment_deploy_qa%2F</url>
     <content type="text"><![CDATA[问题和我的解决方案坑1: hexo d的时候一直报错“ERROR: Permission to #.git denied to #user”。我的解决方案：我检查了ssh key， 重置了github里面保存的key，发现都没有卵用，最后发现是 blog/_config.yml 里面的 deploy -&gt; repo 写错了，我用的是ssh repo，结果写成了https repo！！ 改过来就好了 坑2: 成功push后显示 “There isn’t a GitHub Pages site here”。我的解决方案：等十分钟就好了。 坑3: gitment 一直显示 “Error: Not Found”。我的解决方案：检查了一堆东西后，发现一定要建一个新的repo给gitment当作存储repo，然后把repo地址配置正确即可。这个是我的repo地址：https://github.com/demaciaYu/gitment-comments 坑4: gitment登入的时候报错error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application修改了几次我的评论app里面的url和callback url。 但是没有立即生效的，要等一会儿才有效的。 至于很多常见的问题，没有具体列出来，这里只列了我遇到的问题和我的解决办法。 其他常见问题可以去查google前几条。]]></content>

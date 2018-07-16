@@ -8,8 +8,24 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>Coding changes the world :)</description>
-    <pubDate>Tue, 26 Jun 2018 02:04:13 GMT</pubDate>
+    <pubDate>Mon, 16 Jul 2018 04:08:09 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Scrapy+Postgresql爬取小说网站</title>
+      <link>http://www.yufy.top/2018/07/16/spiderpig_scrapy/</link>
+      <guid>http://www.yufy.top/2018/07/16/spiderpig_scrapy/</guid>
+      <pubDate>Mon, 16 Jul 2018 04:08:09 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;第一次写爬虫，抱着站在巨人肩膀上并且不太想抄作业的态度(原文里面用的mysql，并且爬了另一个网站！所以这里说我不爱抄作业 233)，我照着 文章&lt;code&gt;https://cuiqingcai.com/3472.html&lt;/code&gt; 依葫芦画瓢撸了一个爬网站的功能。具体就是将笔趣看小说网站 &lt;code&gt;www.biqukan.com&lt;/code&gt; 上面所有的小说给爬下来了。我爬的时候，一共爬了差不多8个小时。620篇小说，43万多个章节。&lt;/p&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>第一次写爬虫，抱着站在巨人肩膀上并且不太想抄作业的态度(原文里面用的mysql，并且爬了另一个网站！所以这里说我不爱抄作业 233)，我照着 文章<code>https://cuiqingcai.com/3472.html</code> 依葫芦画瓢撸了一个爬网站的功能。具体就是将笔趣看小说网站 <code>www.biqukan.com</code> 上面所有的小说给爬下来了。我爬的时候，一共爬了差不多8个小时。620篇小说，43万多个章节。</p><a id="more"></a><h2 id="数据表结构"><a href="#数据表结构" class="headerlink" title="数据表结构"></a>数据表结构</h2><p>请检查<code>postgresqlpipelines/sql.py</code>文件来获取所有的字段，注意 <code>novel_info 表中的 novelurl字段</code> 和 <code>novel_content 中的chapterurl字段</code> 需要加上唯一性索引。</p><h2 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h2><ul><li>爬到首页的<code>小说分类条目</code></li><li>分类条目下爬<code>小说的名字和链接</code></li><li>小说链接里面爬取<code>小说介绍和章节链接</code></li><li>章节链接中爬取<code>章节的介绍和内容</code></li></ul><h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p><a href="https://github.com/demaciaYu/spiderpig/tree/master/spiderpig" target="_blank" rel="noopener">https://github.com/demaciaYu/spiderpig/tree/master/spiderpig</a></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>项目写的很糙，第一版抱着罗老板<code>又不是不能用</code>的态度完成了。以后其他的爬虫功能会更新在这个项目里面，代码一定会越来越好的。欢迎大家留言交流 :p</p>]]></content:encoded>
+      
+      <comments>http://www.yufy.top/2018/07/16/spiderpig_scrapy/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>部署hexo + gitment的时候遇到的坑</title>
