@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[sql里面各式各样的joins汇总]]></title>
-    <url>%2F2018%2F09%2F19%2Fsql_joins%2F</url>
+    <url>%2F2018%2F09%2F19%2Fsql-join%2F</url>
     <content type="text"><![CDATA[常用的join形象汇总图 INNER JOIN 内连接内连接就是关联的两张或多张表中，根据关联条件，显示所有匹配的记录，匹配不上的，不显示 OUTER JOIN 外连接外连接，又分为： 1.LEFT OUTER JOIN/LEFT JOIN（左外连接） 2.RIGHT OUTER JOIN/RIGHT JOIN（右外连接） 3.FULL OUTER JOIN/FULL JOIN(全外连接) LEFT OUTER JOIN/LEFT JOIN（左外连接） 左外连接就是关联的两张或多张表中，根据关联条件，显示匹配的记录，左表中有的记录，但是右表中没有匹配上的，以空(null)显示。LEFT OUTER JOIN也可以简写成LEFT JOIN，效果是一样的 RIGHT OUTER JOIN/RIGHT JOIN（右外连接） 右外连接就是关联的两张或多张表中，根据关联条件，显示匹配的记录。右表中有的记录，但是左表中没有匹配上的，以空(null)显示。RIGHT OUTER JOIN也可以简写成RIGHT JOIN，效果是一样的。 FULL OUTER JOIN/FULL JOIN（全外连接） 全外连接就是关联的两张或多张表中，根据关联条件，显示所有匹配和不匹配的记录。左表中有的记录，但是右表中没有匹配上的，以空(null)显示。右表中有的记录，但是左表中没有匹配上的，也以空(null)显示。FULL OUTER JOIN也可以简写成FULL JOIN，效果是一样的 SELF JOIN 自连接自连接，就是把一张表取两个别名，当做两张表来使用,自己和自己关联。 CROSS JOIN 交叉连接CROSS JOIN连接用于生成两张表的笛卡尔集。 1、返回的记录数为两个表的记录数乘积。比如，A表有n条记录，B表有m条记录，则返回n*m条记录。 2、将A表的所有行分别与B表的所有行进行连接。]]></content>
   </entry>
   <entry>
